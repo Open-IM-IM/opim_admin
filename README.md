@@ -10,7 +10,7 @@ By deployment of the Open-IM-Server  on the customer's server, developers  can i
 
 ## Features
 
-Everything in Free
+* Everything in Free
 
 Scalable architecture
 
