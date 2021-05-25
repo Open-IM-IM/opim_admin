@@ -1,3 +1,5 @@
+[![Language](https://img.shields.io/badge/Language-Go-blue.svg)](https://golang.org/)
+
 ## Open-IM-Server: Open source  Instant Messaging Server
 
 Instant messaging server. Backend in pure Golang, wire transport protocol  is JSON over websocket.
