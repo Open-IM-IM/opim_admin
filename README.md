@@ -24,4 +24,6 @@ Lightweight
 
 Supports multiple protocols
 
+## Architecture
 
+![https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Architecture.jpg]
