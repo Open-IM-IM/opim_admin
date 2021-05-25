@@ -28,5 +28,5 @@ Supports multiple protocols
 
 ![avatar](https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Architecture.jpg)
 
-##License
-TiDB is under the Apache 2.0 license. See the LICENSE file for details.
+## License
+TiDB is under the Apache 2.0 license. See the [LICENSE](https://github.com/Open-IM-IM/opim_admin/blob/main/LICENSE) file for details.
