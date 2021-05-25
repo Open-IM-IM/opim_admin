@@ -12,17 +12,17 @@ By deployment of the Open-IM-Server  on the customer's server, developers  can i
 
 * Everything in Free
 
-Scalable architecture
+* Scalable architecture
 
-Easy integration 
+* Easy integration 
 
-Good scalability
+* Good scalability
 
-High performance
+* High performance
 
-Lightweight
+* Lightweight
 
-Supports multiple protocols
+* Supports multiple protocols
 
 ## Architecture
 
