@@ -30,8 +30,8 @@ By deployment of the Open-IM-Server  on the customer's server, developers  can i
 * Supports multiple protocols
 
 ## Community
-* Join the Telegram-OpenIM group https://t.me/joinchat/zSJLPaHBNLZmODI1
-* 扫码加入微信群https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Wechat.jpg
+* Join the Telegram-OpenIM group: https://t.me/joinchat/zSJLPaHBNLZmODI1
+* 扫码加入微信群: https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Wechat.jpg
 
 
 ## Architecture
