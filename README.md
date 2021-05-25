@@ -31,8 +31,8 @@ By deployment of the Open-IM-Server  on the customer's server, developers  can i
 
 ## Community
 * Join the Telegram-OpenIM group https://t.me/joinchat/zSJLPaHBNLZmODI1
-* 扫码加入微信群
-![avatar](https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Wechat.jpg)
+* 扫码加入微信群https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Wechat.jpg
+
 
 ## Architecture
 
