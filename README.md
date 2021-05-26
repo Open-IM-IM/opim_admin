@@ -332,7 +332,7 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
       }
       ```
 
-- **Authentication Clow Chart **
+- **Authentication Clow Chart**
 
 ![avatar](https://github.com/Open-IM-IM/opim_admin/blob/main/docs/open-im-server.png)
   
