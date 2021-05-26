@@ -333,9 +333,8 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
       ```
 
 - **Authentication Clow Chart **
+  https://github.com/Open-IM-IM/opim_admin/blob/main/docs/open-im-server.png
   
-  <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:525px; height:400px;" src="https://www.processon.com/embed/60adaa2b7d9c082184325de9"></iframe>
-
 ## Architecture
 
 ![avatar](https://github.com/Open-IM-IM/opim_admin/blob/main/docs/Architecture.jpg)
