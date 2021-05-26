@@ -45,188 +45,102 @@ business data.
 
 #### Building from Source
 
-1. Install [Go environment](https://golang.org/doc/install). Make sure Go version is at least 1.15.
+1. Install [Go environment](https://golang.org/doc/install). Make sure Go version is at least 1.15. 
 
-2. Open-IM relies on five open source high-performance components: **Etcd**, **MySQL**, **MongoDB**, **Redis**, **
-   Kafka**. Before you deploy Open-IM privately, please make sure that you have installed the above five components
-   and **check the component parameters ** in the configuration file. If your server does not have the above components,
-   you must install the missing components first. **If you have the above components, it is recommended to use them
-   directly, if not, Docker installation is recommended, which is faster and more convenient**.
+2. Open-IM relies on five open source high-performance components: **Etcd**, **MySQL**, **MongoDB**, **Redis**, **Kafka**. Before you deploy Open-IM privately, please make sure that you have installed the above five components and **check the component parameters ** in the configuration file. If your server does not have the above components, you must install the missing components first. **If you have the above components, it is recommended to use them directly, if not, Docker installation is recommended, which is faster and more convenient**.
 
-3. Git clone Open-IM project
-
-   ```
-   git clone github.com....xxx
-   ```
-
-4. Open `config.yaml` ,Check that the Etcd connection parameters.
-
-   ```
-   etcd:
-     etcdAddr: [ x.x.x.x:2379]
-   ```
-
-5. Check that the database(MySQ) connection parameters are correct for your database.
-
-   ```
-   mysql:
-     dbAddress: [ x.x.x.x:3306]
-     dbUserName: xxx
-     dbPassword: xxx
-   ```
-
-6. Check that the database(MongoDB) connection parameters are correct for your database.
-
-   ```
-   mongo:
-   dbAddress: [ x.x.x.x:27017 ]
-     dbUserName:
-     dbPassword:
-   ```
-
-7. Check that the Redis connection parameters.
-
-   ```
-   redis:
-     dbAddress: [x.x.x.x:6379]
-     dbPassWord: 
-   ```
-
-8. Check that the Kafka connection parameters.
-
-   ```
-   kafka:
-     ws2mschat:
-       addr: [ x.x.x.x:9092 ]
-     ms2pschat:
-       addr: [ x.x.x.x:9092 ]
-   ```
-
-9. Build Open-IM server and database initializer:
-
-    - **MySQL**
-
-      ```
-      待补充
-      ```
-
-    - **MongoDB**
-
-      ```
-      待补充
-      ```
-
-### 部署docker
-
-### Installing Open-IM-Server
-
-#### Building from Source
-
-1. Install [Go environment](https://golang.org/doc/install). Make sure Go version is at least 1.15.
-
-2. Open-IM relies on five open source high-performance components: **Etcd**, **MySQL**, **MongoDB**, **Redis**, **
-   Kafka**. Before you deploy Open-IM privately, please make sure that you have installed the above five components
-   and **check the component parameters ** in the configuration file. If your server does not have the above components,
-   you must install the missing components first. **If you have the above components, it is recommended to use them
-   directly, if not, Docker installation is recommended, which is faster and more convenient**.
-
-3. Git clone Open-IM project
+3. Git clone  Open-IM project 
 
    ```
    git clone https://github.com/tinode/chat
    ```
 
-4. Open [config.yaml](https://github.com/Open-IM-IM/opim_admin/blob/main/config/config.yaml),then modify the following
-   parameters.
+4. Open [config.yaml](https://github.com/Open-IM-IM/opim_admin/blob/main/config/config.yaml),then modify the following parameters.
 
-    - Check that the Etcd connection parameters.
+   - Check that the Etcd connection parameters.
 
-      ```
-      etcd:
-        etcdAddr: [ xxx.xxx.xxx.xxx:2379]
-      ```
+     ```
+     etcd:
+       etcdAddr: [ xxx.xxx.xxx.xxx:2379]
+     ```
 
-    - Check or modify database(MySQ) connection parameters are correct for your database.
+   - Check or modify database(MySQL) connection parameters are correct for your database.
 
-      ```
-      mysql:
-        dbAddress: [ xxx.xxx.xxx.xxx:3306]
-        dbUserName: xxx
-        dbPassword: xxx
-      ```
+     ```
+     mysql:
+       dbAddress: [ xxx.xxx.xxx.xxx:3306]
+       dbUserName: xxx
+       dbPassword: xxx
+     ```
 
-    - Check or modify database(MongoDB) connection parameters are correct for your database.
+   - Check or modify database(MongoDB) connection parameters are correct for your database.
 
-      ```
-      mongo:
-      dbAddress: [xxx.xxx.xxx.xxx:27017 ]
-        dbUserName:
-        dbPassword:
-      ```
+     ```
+     mongo:
+     dbAddress: [xxx.xxx.xxx.xxx:27017 ]
+       dbUserName:
+       dbPassword:
+     ```
 
-    - Check or modify Redis connection parameters.
+   - Check or modify Redis connection parameters.
 
-      ```
-      redis:
-        dbAddress: [xxx.xxx.xxx.xxx:6379]
-        dbPassWord: 
-      ```
+     ```
+     redis:
+       dbAddress: [xxx.xxx.xxx.xxx:6379]
+       dbPassWord: 
+     ```
 
-    - Check or modify Kafka connection parameters.
+   - Check or modify Kafka connection parameters.
 
-      ```
-      kafka:
-        ws2mschat:
-          addr: [ xxx.xxx.xxx.xxx:9092 ]
-        ms2pschat:
-          addr: [ xxx.xxx.xxx.xxx:9092 ]
-      ```
+     ```
+     kafka:
+       ws2mschat:
+         addr: [ xxx.xxx.xxx.xxx:9092 ]
+       ms2pschat:
+         addr: [ xxx.xxx.xxx.xxx:9092 ]
+     ```
 
 5. Build Open-IM server and database initializer:
 
-    - **MySQL**
+   - **MySQL**
 
-      ```
-      待补充
-      ```
+     ```
+     待补充
+     ```
 
-    - **MongoDB**
+   - **MongoDB**
 
-      ```
-      待补充
-      ```
+     ```
+     待补充
+     ```
 
 6. Enter the script directory and execute the script according to the steps。
 
-    1. Shell authorization
+   1. Shell authorization
 
-       ```
-       chmod +x *.sh
-       ```
+      ```
+      chmod +x *.sh
+      ```
 
-    2. Execute build shell
+   2. Execute build shell
 
-       ```
-       ./auto_build_service_file.sh
-       ```
+      ```
+      ./auto_build_service_file.sh
+      ```
 
-    3. Start service
+   3. Start service
 
-       ```
-       ./auto_start_service.sh
-       ```
+      ```
+      ./auto_start_service.sh
+      ```
 
 #### Using Docker to run Open-IM-Server
 
 All images are available at https://hub.docker.com/r/lyt1123/open_im_server
 
-1. [Install Docker](https://docs.docker.com/install/) 1.13 or above.
+1. [Install Docker](https://docs.docker.com/install/) 1.13 or above. 
 
-2. Open-IM relies on five open source high-performance components: **Etcd**, **MySQL**, **MongoDB**, **Redis**, **
-   Kafka**. Before you deploy Open-IM privately, please make sure that you have installed the above five components
-   and **check the component parameters ** in the configuration file. If your server does not have the above components,
-   you must install the missing components first. **If you have the above components, it is recommended to use them
-   directly, if not, Docker installation is recommended, which is faster and more convenient**.
+2. Open-IM relies on five open source high-performance components: **Etcd**, **MySQL**, **MongoDB**, **Redis**, **Kafka**. Before you deploy Open-IM privately, please make sure that you have installed the above five components and **check the component parameters ** in the configuration file. If your server does not have the above components, you must install the missing components first. **If you have the above components, it is recommended to use them directly, if not, Docker installation is recommended, which is faster and more convenient**.
 
 3. Pull Open_IM_Server Image from docker
 
@@ -236,61 +150,58 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
    docker pull docker.io/lyt1123/open_im_server:1.0
    ```
 
-4. External config file,the container comes with a built-in config file which can be customized with values from the
-   environment variables .**If changes are extensive it may be more convenient to replace the built-in config file with
-   a custom one**. In that case map the config file located on your host.
+4. External config file,the container comes with a built-in config file which can be customized with values from the environment variables .**If changes are extensive it may be more convenient to replace the built-in config file with a custom one**. In that case map the config file located on your host.
 
-    - Create configuration folder directory
+   - Create configuration folder directory
 
-      ```
-      mkdir -p open_im_server/config
-      ```
+     ```
+     mkdir -p open_im_server/config
+     ```
 
-    - Download the [config.yaml](https://github.com/Open-IM-IM/opim_admin/blob/main/config/config.yaml) file from
-      github,then modify the following parameters
+   - Download the [config.yaml](https://github.com/Open-IM-IM/opim_admin/blob/main/config/config.yaml) file from github, then modify the following parameters
 
-        - Check or modify the Etcd connection parameters.
+     - Check or modify the Etcd connection parameters.
 
-      ```
-      etcd:
-        etcdAddr: [ x.x.x.x:2379]
-      ```
+     ```
+     etcd:
+       etcdAddr: [ x.x.x.x:2379]
+     ```
 
-        - Check or modify database(MySQ) connection parameters are correct for your database.
+     - Check or modify  database(MySQL) connection parameters are correct for your database.
 
-      ```
-      mysql:
-        dbAddress: [ x.x.x.x:3306]
-        dbUserName: xxx
-        dbPassword: xxx
-      ```
+     ```
+     mysql:
+       dbAddress: [ x.x.x.x:3306]
+       dbUserName: xxx
+       dbPassword: xxx
+     ```
 
-        - Check or modify database(MongoDB) connection parameters are correct for your database.
+     - Check or modify  database(MongoDB) connection parameters are correct for your database.
 
-      ```
-      mongo:
-      dbAddress: [ x.x.x.x:27017 ]
-        dbUserName:
-        dbPassword:
-      ```
+     ```
+     mongo:
+     dbAddress: [ x.x.x.x:27017 ]
+       dbUserName:
+       dbPassword:
+     ```
 
-        - Check or modify the Redis connection parameters.
+     - Check or modify  the Redis connection parameters.
 
-      ```
-      redis:
-        dbAddress: [x.x.x.x:6379]
-        dbPassWord: 
-      ```
+     ```
+     redis:
+       dbAddress: [x.x.x.x:6379]
+       dbPassWord: 
+     ```
 
-        - Check or modify the Kafka connection parameters.
+     - Check or modify  the Kafka connection parameters.
 
-      ```
-      kafka:
-        ws2mschat:
-          addr: [ x.x.x.x:9092 ]
-        ms2pschat:
-          addr: [ x.x.x.x:9092 ]
-      ```
+     ```
+     kafka:
+       ws2mschat:
+         addr: [ x.x.x.x:9092 ]
+       ms2pschat:
+         addr: [ x.x.x.x:9092 ]
+     ```
 
 5. Start Open-IM-Server Service
 
@@ -298,84 +209,62 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
    docker run -p 10000:10000 -p 7777:7777 --name open_im_server -v /home/open_im_server/logs:/home/open_im_server/logs -v /home/open_im_server/config/config.yaml:/home/open_im_server/config/config.yaml --restart always -d docker.io/lyt1123/open_im_server:[tag]
    ```
 
-    - -p 10000:10000 The container port maps the host 10000 port, provides api service.
-    - -p 7777:7777 The container port maps the host 7777 port, provides message services.
-    - --name open_im_server Container service name
-    - -v /home/open_im_server/logs:/home/open_im_server/logs The container log directory maps the host directory
-    - -v /home/open_im_server/config/config.yaml:/home/open_im_server/config/config.yaml The container configuration
-      file maps the host configuration file
-    - --restart always Automatically start when the container is closed abnormally
-    - -d Running service in the background
+   - -p 10000:10000	The container port maps the host 10000 port, provides api service.
+   - -p  7777:7777    The container port maps the host  7777 port, provides message services.
+   - --name open_im_server   Container service name 
+   - -v /home/open_im_server/logs:/home/open_im_server/logs    The container log directory maps the host directory
+   - -v /home/open_im_server/config/config.yaml:/home/open_im_server/config/config.yaml    The container configuration file maps the host configuration file
+   - --restart always    Automatically start when the container is closed abnormally
+   - -d  Running service in the background
 
 ### CONFIGURATION INSTRUCTIONS
+>Open-IM configuration is divided into basic component configuration and business internal service configuration. Developers need to fill in the address of each component as the address of their server component when using the product, and ensure that the internal service port of the business is not occupied
 
-> > Open-IM configuration is divided into basic component configuration and business internal service configuration. Developers need to fill in the address of each component as the address of their server component when using the product, and ensure that the internal service port of the business is not occupied
-
-#### basicComponentConfigurationInstructions
-
+#### Basic Component Configuration Instructions
 * **ETCD**
-    * Etcd is used for the discovery and registration of rpc services, etcd Schema is the prefix of the registered name,
-      it is recommended to modify it to your company name, etcd address (ip+port) supports clustered deployment, you can
-      fill in multiple ETCD addresses separated by commas, and also only one etcd address.
+  
+    * Etcd is used for the discovery and registration of rpc services, etcd Schema is the prefix of the registered name, it is recommended to modify it to  your company name, etcd address (ip+port) supports clustered deployment, you can fill in multiple ETCD addresses separated by commas, and also only one etcd address.
 * **MySQL**
-    * mysql is used for full storage of messages and user relationships. Cluster deployment is not supported for the
-      time being. Modify addresses and users, passwords, and database names.
+    * mysql is used for full storage of messages and user relationships. Cluster deployment is not supported for the time being. Modify addresses and users, passwords, and database names.
 * **Mongo**
-    * Mongo is used for offline storage of messages. The default storage is 7 days. Cluster deployment is temporarily
-      not supported. Just modify the address and database name.
+    * Mongo is used for offline storage of messages. The default storage is 7 days. Cluster deployment is temporarily not supported. Just modify the address and database name.
 * **Redis**
-    * Redis is currently mainly used for message serial number storage and user token information storage. Cluster
-      deployment is temporarily not supported. Just modify the corresponding redis address and password.
+    * Redis is currently mainly used for message serial number storage and user token information storage. Cluster deployment is temporarily not supported. Just modify the corresponding redis address and password.
 * **Kafka**
-    * Kafka is used as a message transfer storage queue to support cluster deployment, just modify the corresponding
-      address
-
-#### internalServiceConfigurationInstructions
-
+    * Kafka is used as a message transfer storage queue to support cluster deployment, just modify the corresponding address
+    #### Internal Service Configuration Instructions
 * **credential&&push**
-    * The IM SDK needs to use the three-party offline push function. Currently, Tencent's three-party push is used. It
-      supports IOS, Android and OSX push. This information is some registration information pushed by Tencent.
-      Developers need to go to Tencent Cloud Mobile Push to register the corresponding information. If you do not fill
-      in the corresponding information, you cannot use the offline message push function
+    * The Open-IM  needs to use the three-party offline push function. Currently, Tencent's three-party push is used. It supports IOS, Android and OSX push. This information is some registration information pushed by Tencent. Developers need to go to Tencent Cloud Mobile Push to register the corresponding information. If you do not fill in the corresponding information, you cannot use the offline message push function
 * **api&&rpcport&&longconnsvr&&rpcregistername**
-    * The api port is the http interface, longconnsvr is the websocket listening port, and rpcport is the internal
-      service startup port. Both support cluster deployment. Make sure that these ports are not used. If you want to
-      open multiple services for a single service, fill in multiple ports separated by commas. rpcregistername is the
-      service name registered by each service to the registry etcd, no need to modify
+    * The api port is the http interface, longconnsvr is the websocket listening port, and rpcport is the internal service startup port. Both support cluster deployment. Make sure that these ports are not used. If you want to open multiple services for a single service, fill in multiple ports separated by commas. rpcregistername is the service name registered by each service to the registry etcd, no need to modify
 * **log&&modulename**
-    * The log configuration includes the storage path of the log file, and the log is sent to elasticsearch for log
-      viewing. Currently, the log is not supported to be sent to elasticsearch. The configuration does not need to be
-      modified for the time being. The modulename is used to split the log according to the name of the service module.
-      The default configuration is fine.
+    
+    * The log configuration includes the storage path of the log file, and the log is sent to elasticsearch for log viewing. Currently, the log is not supported to be sent to elasticsearch. The configuration does not need to be modified for the time being. The modulename is used to split the log according to the name of the service module. The default configuration is fine.
 * **multiloginpolicy&&tokenpolicy**
-    * IM SDK supports multi-terminal login. Currently, there are three multi-terminal login policies. The PC terminal
-      and the mobile terminal are online at the same time by default. When multiple policies are configured to be true,
-      the first policy with true is used by default, and the token policy is the generated token policy. , The developer
-      can customize the expiration time of the token
+    * Open-IM supports multi-terminal login. Currently, there are three multi-terminal login policies. The PC terminal and the mobile terminal are online at the same time by default. When multiple policies are configured to be true, the first policy with true is used by default, and the token policy is the generated token policy. , The developer can customize the expiration time of the token
 
 ### SCRIPT DESCRIPTION
-
-> > Open-IM script提供服务编译、启动、停止脚本，Open-IM的脚本启动模块有四个，一个是http+rpc服务启动模块，其次是websocket服务启动模块，然后是msg_transfer模块，最后是push模块
-
+>Open-IM script provides service compilation, start, and stop scripts. There are four Open-IM script start modules, one is the http+rpc service start module, the second is the websocket service start module, then the msg_transfer module, and the last is the push module
 * **path_info.cfg&&style_info.cfg&&functions.sh**
-    * 包含各个模块的路径信息，包括源码所在路径，服务启动的名称，shell打印字体样式以及一些处理shell字符串函数
+    * Contains the path information of each module, including the path where the source code is located, the name of the service startup, the shell print font style, and some functions for processing shell strings
 * **build_all_service.sh**
-    * 编译模块，将Open-IM所有的源码编译成二进制文件并放入bin目录中
+    * Compile the module, compile all the source code of Open-IM into a binary file and put it into the bin directory
 * **start_rpc_api_service.sh&&msg_gateway_start.sh&&msg_transfer_start.sh&&push_start.sh**
-    * 独立脚本启动模块，依次为api和rpc模块，消息网关模块，消息中转模块，推送模块
+    * Independent script startup module, followed by api and rpc modules, message gateway module, message transfer module, and push module
 * **start_all.sh&&stop_all.sh**
-    * 总脚本，启动所有的服务和关闭所有的服务
+    * Total script, start all services and close all services
 
-### 服务端鉴权api 图文讲解登录鉴权过程
+### Server-side authentication api graphic explanation of the login authentication process
 
 - **API call description**
+   
    ```
    app：app client
    app-server：app server
    open-im-sdk：Tuoyun's open source sdk
    open-im-server：Tuoyun's open source sdk service 
    ```
-
+   
 - **User Register**
     - **Request URL**
        ```
@@ -387,18 +276,18 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
       ```
     - **Parameter**
 
-      | parameter name   | required | Type   | Description                                                         |
-                             | -------- | ---- | ------ | ------------------------------------------------------------ |
-      | secret   | Y   | string | The secret key used by the app server to connect to the sdk server. The maximum length is 32 characters. It must be ensured that the secret keys of the app server and the sdk server are the same. There is a risk of secret leakage, and it is best to save it on the user server. |
-      | platform | Y   | int    | Platform type iOS 1, Android 2, Windows 3, OSX 4, WEB 5, applet 6, linux 7 |
-      | uid      | Y   | string | User ID, with a maximum length of 64 characters, must be unique within an APP   |
-      | name     | Y   | string | User nickname, the maximum length is 64 characters, can be set as an empty string   |
-      | icon     | N   | string | User avatar, the maximum length is 1024 bytes, can be set as an empty string  |
-      | gender   | N   | int    | User gender, 0 means unknown, 1 means male, 2 female means female, others will report parameter errors |
-      | mobile   | N   | string | User mobile, the maximum length is 32 characters, non-Mainland China mobile phone numbers need to fill in the country code (such as the United States: +1-xxxxxxxxxx) or the area code (such as Hong Kong: +852-xxxxxxxx), which can be set as an empty string |
-      | birth    | N   | string | The birthday of the user, the maximum length is 16 characters, can be set as an empty string                   |
-      | email    | N   | string | User email, the maximum length is 64 characters, can be set as an empty string   |
-      | ex       | N   | string | User business card extension field, the maximum length is 1024 characters, users can extend it by themselves, it is recommended to encapsulate it into a JSON string, or set it to an empty string |
+      | parameter name | required | Type   | Description                                                  |
+      | -------------- | -------- | ------ | ------------------------------------------------------------ |
+      | secret         | Y        | string | The secret key used by the app server to connect to the sdk server. The maximum length is 32 characters. It must be ensured that the secret keys of the app server and the sdk server are the same. There is a risk of secret leakage, and it is best to save it on the user server. |
+      | platform       | Y        | int    | Platform type iOS 1, Android 2, Windows 3, OSX 4, WEB 5, applet 6, linux 7 |
+      | uid            | Y        | string | User ID, with a maximum length of 64 characters, must be unique within an APP |
+      | name           | Y        | string | User nickname, the maximum length is 64 characters, can be set as an empty string |
+      | icon           | N        | string | User avatar, the maximum length is 1024 bytes, can be set as an empty string |
+      | gender         | N        | int    | User gender, 0 means unknown, 1 means male, 2 female means female, others will report parameter errors |
+      | mobile         | N        | string | User mobile, the maximum length is 32 characters, non-Mainland China mobile phone numbers need to fill in the country code (such as the United States: +1-xxxxxxxxxx) or the area code (such as Hong Kong: +852-xxxxxxxx), which can be set as an empty string |
+      | birth          | N        | string | The birthday of the user, the maximum length is 16 characters, can be set as an empty string |
+      | email          | N        | string | User email, the maximum length is 64 characters, can be set as an empty string |
+      | ex             | N        | string | User business card extension field, the maximum length is 1024 characters, users can extend it by themselves, it is recommended to encapsulate it into a JSON string, or set it to an empty string |
 
     - **Return Parameter**
       ```
@@ -411,7 +300,41 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
             "expiredTime": 0,
          }
       }
-      ``` 
+      ```
+
+- **Refresh Token**
+    - **Request URL**
+       ```
+       http://x.x.x.x:10000/auth/user_token
+      ```
+    - **Request method**
+      ```
+      POST
+      ```
+    - **Parameter**
+
+      | parameter name | required | Type   | Description                                                  |
+      | -------------- | -------- | ------ | ------------------------------------------------------------ |
+      | secret         | Y        | string | The secret key used by the app server to connect to the sdk server. The maximum length is 32 characters. It must be ensured that the secret keys of the app server and the sdk server are the same. There is a risk of secret leakage, and it is best to save it on the user server. |
+      | platform       | Y        | int    | Platform type iOS 1, Android 2, Windows 3, OSX 4, WEB 5, applet 6, linux 7 |
+      | uid            | Y        | string | User ID, with a maximum length of 64 characters, must be unique within an APP |
+    
+    - **Return Parameter**
+      ```
+      {
+         "errCode": 0,
+         "errMsg": "",
+         "data":{
+            "uid": "",
+            "token": "",
+            "expiredTime": 0,
+         }
+      }
+      ```
+
+- **Authentication Clow Chart **
+  
+  <iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:525px; height:400px;" src="https://www.processon.com/embed/60adaa2b7d9c082184325de9"></iframe>
 
 ## Architecture
 
