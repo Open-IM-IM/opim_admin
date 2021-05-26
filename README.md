@@ -255,15 +255,6 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
     * Total script, start all services and close all services
 
 ### Server-side authentication api graphic explanation of the login authentication process
-
-- **API call description**
-   
-   ```
-   app：app client
-   app-server：app server
-   open-im-sdk：Tuoyun's open source sdk
-   open-im-server：Tuoyun's open source sdk service 
-   ```
    
 - **User Register**
     - **Request URL**
@@ -331,6 +322,15 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
          }
       }
       ```
+
+- **API call description**
+   
+   ```
+   app：app client
+   app-server：app server
+   open-im-sdk：Tuoyun's open source sdk
+   open-im-server：Tuoyun's open source sdk service 
+   ```
 
 - **Authentication Clow Chart**
 
