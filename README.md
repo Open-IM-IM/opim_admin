@@ -232,7 +232,7 @@ All images are available at https://hub.docker.com/r/lyt1123/open_im_server
     * Redis is currently mainly used for message serial number storage and user token information storage. Cluster deployment is temporarily not supported. Just modify the corresponding redis address and password.
 * **Kafka**
     * Kafka is used as a message transfer storage queue to support cluster deployment, just modify the corresponding address
-    #### Internal Service Configuration Instructions
+#### Internal Service Configuration Instructions
 * **credential&&push**
     * The Open-IM  needs to use the three-party offline push function. Currently, Tencent's three-party push is used. It supports IOS, Android and OSX push. This information is some registration information pushed by Tencent. Developers need to go to Tencent Cloud Mobile Push to register the corresponding information. If you do not fill in the corresponding information, you cannot use the offline message push function
 * **api&&rpcport&&longconnsvr&&rpcregistername**
